@@ -132,6 +132,7 @@ lib/
 - `ShellService` - Command execution with real-time output streaming, process management, timeout handling, and security validation
 - `WebService` - Web search and content fetching with result filtering, caching, and content sanitization
 - `McpService` - MCP server integration with connection management, tool discovery, authentication flows, and error recovery
+- `QuestService` - Quest system management including quest lifecycle, knowledge base interactions, and learning engine queries
 - `ConfigService` - Application configuration management with validation, environment-specific settings, and change tracking
 
 ### B. Data Models
