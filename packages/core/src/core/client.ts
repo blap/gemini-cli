@@ -649,6 +649,16 @@ export class GeminiClient {
     }
   }
 
+  async embedContent(query: string): Promise<number[] | undefined> {
+    const embedContentResponse =
+      await this.getContentGeneratorOrFail().embedContent({
+        model: this.config.getEmbeddingModel(),
+        contents: [{ parts: [{ text: query }], role: 'user' }],
+      });
+
+    return embedContentResponse.embeddings?.[0]?.values;
+  }
+
   async tryCompressChat(
     prompt_id: string,
     force: boolean = false,

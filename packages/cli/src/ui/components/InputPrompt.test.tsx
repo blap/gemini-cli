@@ -1980,14 +1980,14 @@ describe('InputPrompt', () => {
 
       stdin.write('\u001B[C');
       await wait();
-      expect(clean(stdout.lastFrame())).toContain('←');
+      expect(stdout.lastFrame()).toContain('←');
       expect(stdout.lastFrame()).toMatchSnapshot(
         'command-search-expanded-match',
       );
 
       stdin.write('\u001B[D');
       await wait();
-      expect(clean(stdout.lastFrame())).toContain('→');
+      expect(stdout.lastFrame()).toContain('→');
       expect(stdout.lastFrame()).toMatchSnapshot(
         'command-search-collapsed-match',
       );

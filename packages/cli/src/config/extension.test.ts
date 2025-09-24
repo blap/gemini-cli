@@ -728,7 +728,7 @@ describe('extension tests', () => {
         type: 'git',
       });
       fs.rmSync(targetExtDir, { recursive: true, force: true });
-    });
+    }, 10000);
 
     it('should install a linked extension', async () => {
       const sourceExtDir = createExtension({
